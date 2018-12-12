@@ -74,6 +74,15 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     #            of the stair steps.
     # -------------------------------------------------------------------------
 
+    a = rg.Point(starting_point.x, starting_point.y)
+    b = rg.Point(starting_point.x, starting_point.y)
+
+    for _ in range(number_of_stairs):
+        line = rg.Line(a, b)
+        a = a.x + step_size
+        b = b.x + step_size
+        line.attach_to(window)
+        window.render(0.5)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

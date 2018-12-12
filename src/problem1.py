@@ -105,9 +105,11 @@ def problem1(square, thickness, window):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    circle = rg.Circle
+    circle = rg.Circle(rg.Point(square.x, square.y - .5*square.length_of_each_side),
+                       .5*square.length_of_each_side)
     circle.fill_color = square.fill_color
-
+    window.render()
+    circle.attach_to(window)
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

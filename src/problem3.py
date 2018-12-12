@@ -292,12 +292,10 @@ def problem3b(m, r):
     #          Tests have been written for you (above).
     ###########################################################################
 
-    x = 0
-    t = 1
     value = 0
-    for k in range(m, (r + 1)):
-        value = t / ((r + x)**t)
-        x = x + 1
+    for k in range(1, m + 1):
+        value = value + (k / (r**k))
+        r = r + 1
     return value
 
 
