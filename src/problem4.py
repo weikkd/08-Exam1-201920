@@ -82,7 +82,7 @@ def problem4(number_of_stairs, step_size, starting_point, window):
         left = rg.Point(left.x + step_size, left.y - step_size)
         right = rg.Point(right.x + step_size, right.y - step_size)
         line.attach_to(window)
-        window.render()
+        window.render(.25)
 
 
 # -----------------------------------------------------------------------------
